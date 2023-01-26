@@ -4,12 +4,8 @@ import styles from './Home.styles';
 
 export default function Home() {
   return (
-    // <SafeAreaView>
-    //   <ScrollView contentInsetAdjustmentBehavior="automatic">
     <View style={styles.main}>
       <Text>Welcome to Indiassetz Membership Plans</Text>
     </View>
-    //   </ScrollView>
-    // </SafeAreaView>
   );
 }
