@@ -1,0 +1,77 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Literata-Black.ttf",
+      "sha1": "f649abfb7442a85b0958e455bc095a7306c13786"
+    },
+    {
+      "path": "src/assets/fonts/Literata-BlackItalic.ttf",
+      "sha1": "5a4683b47bb311a77fb650f92069e39e71f05b2a"
+    },
+    {
+      "path": "src/assets/fonts/Literata-Bold.ttf",
+      "sha1": "7551fc544305b4fcc8cf2fa34158852434bb4827"
+    },
+    {
+      "path": "src/assets/fonts/Literata-BoldItalic.ttf",
+      "sha1": "18fe07976c227071b40f7926f4a50d5d1087c46e"
+    },
+    {
+      "path": "src/assets/fonts/Literata-ExtraBold.ttf",
+      "sha1": "ef94736fd25b11b1b52a8e738ddebc946bf716be"
+    },
+    {
+      "path": "src/assets/fonts/Literata-ExtraBoldItalic.ttf",
+      "sha1": "5af9edb1ba125236ffd7a63098f9fd1560f75319"
+    },
+    {
+      "path": "src/assets/fonts/Literata-ExtraLight.ttf",
+      "sha1": "efff3fe1bb073b7ed8e97f5125be8235a63f3547"
+    },
+    {
+      "path": "src/assets/fonts/Literata-ExtraLightItalic.ttf",
+      "sha1": "42c5c6c94396cb77e3084be897087b1e0690f9f8"
+    },
+    {
+      "path": "src/assets/fonts/Literata-Italic-VariableFont_opsz,wght.ttf",
+      "sha1": "1aa675403970d751584b58e7d103db9e92255032"
+    },
+    {
+      "path": "src/assets/fonts/Literata-Italic.ttf",
+      "sha1": "a114f0ff0d0541ad17931d9237e8fd18024f23f1"
+    },
+    {
+      "path": "src/assets/fonts/Literata-Light.ttf",
+      "sha1": "93b615a7ac6a37543617f4286c35a9c86acc472b"
+    },
+    {
+      "path": "src/assets/fonts/Literata-LightItalic.ttf",
+      "sha1": "0bff6681bfde1cbb1c0261d3e58e230e19d6cc15"
+    },
+    {
+      "path": "src/assets/fonts/Literata-Medium.ttf",
+      "sha1": "b6eb640c196e25f4e86eeeded661e3c8579beddd"
+    },
+    {
+      "path": "src/assets/fonts/Literata-MediumItalic.ttf",
+      "sha1": "c2c57f98b707d91a54f41fc8741dc44de9279b3f"
+    },
+    {
+      "path": "src/assets/fonts/Literata-Regular.ttf",
+      "sha1": "68f97c694fb03f019d018c709576f64f239d08f5"
+    },
+    {
+      "path": "src/assets/fonts/Literata-SemiBold.ttf",
+      "sha1": "78d0594343253a706154e87c2e323d2477917e84"
+    },
+    {
+      "path": "src/assets/fonts/Literata-SemiBoldItalic.ttf",
+      "sha1": "7c576e2caf5c7a47e074d74d856c7949e3510bf3"
+    },
+    {
+      "path": "src/assets/fonts/Literata-VariableFont_opsz,wght.ttf",
+      "sha1": "53f7067d0e88277e69853de05e91364cfd073663"
+    }
+  ]
+}
