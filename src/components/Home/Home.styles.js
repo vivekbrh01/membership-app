@@ -12,7 +12,7 @@ export default StyleSheet.create({
     height: 40,
     width: 40,
     marginLeft: 20,
-    marginTop: 32,
+    marginTop: 50,
   },
   paymentButton: {
     position: 'absolute',
@@ -29,7 +29,7 @@ export default StyleSheet.create({
   },
   paymentButtonText: {
     fontSize: 16,
-    fontWeight: 800,
+    fontWeight: '800',
     lineHeight: 19,
     color: '#0A3A67',
   },
@@ -37,7 +37,7 @@ export default StyleSheet.create({
     paddingTop: 4,
     fontSize: 14,
     lineHeight: 18,
-    fontWeight: 500,
+    fontWeight: '500',
     color: '#0A3A67',
   },
   proceedPaymentBtn: {
@@ -54,7 +54,7 @@ export default StyleSheet.create({
   },
   proceedPaymentBtnText: {
     color: 'white',
-    fontWeight: 800,
+    fontWeight: '800',
     fontSize: 16,
     lineHeight: 24,
   },

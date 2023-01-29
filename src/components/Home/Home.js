@@ -1,6 +1,12 @@
 import React, {useEffect, useState} from 'react';
-import {LogBox} from 'react-native';
-import {View, ImageBackground, Image, Text} from 'react-native';
+import {
+  View,
+  ImageBackground,
+  Image,
+  Text,
+  TouchableOpacity,
+  LogBox,
+} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 import styles from './Home.styles';
@@ -8,16 +14,24 @@ import ImageLinks from '../../utils/ImagesLinks';
 import MembershipCards from '../MembershipCards';
 import {membershipTypes} from '../../utils/enums';
 
-export default function Home() {
-  const [currentPage, setCurrentPage] = useState(0);
+export default function Home({navigation}) {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [selectedMembershipData, setSelectedMembershipData] = useState({});
+
   useEffect(() => {
     LogBox.ignoreLogs(['Animated: `useNativeDriver`']);
   }, []);
 
   function handleSliderPageChange(pageCount) {
-    setCurrentPage(pageCount);
+    setCurrentSlide(pageCount);
   }
-  console.log(membershipTypes[currentPage], 'membershipTypes');
+  function handleProceedBtnPress() {
+    setSelectedMembershipData(membershipTypes[currentSlide]);
+    navigation.push('OrderConfirmation', {
+      selectedMembershipData: selectedMembershipData,
+    });
+  }
+  // console.log(membershipTypes[currentSlide], 'membershipTypes');
 
   return (
     <View style={styles.main}>
@@ -31,26 +45,30 @@ export default function Home() {
           <ImageBackground
             source={ImageLinks.homeBackground}
             style={styles.backgroundImage}>
-            <Image
-              source={ImageLinks.backArrowWhite}
-              style={styles.backArrowWhite}
-            />
+            <TouchableOpacity>
+              <Image
+                source={ImageLinks.backArrowWhite}
+                style={styles.backArrowWhite}
+              />
+            </TouchableOpacity>
             <MembershipCards handleSliderPageChange={handleSliderPageChange} />
-            {membershipTypes[currentPage]?.isCurrent === false && (
+            {membershipTypes[currentSlide]?.isCurrent === false && (
               <View style={styles.paymentButton}>
                 <View>
                   <Text style={styles.paymentButtonText}>
-                    {membershipTypes[currentPage]?.totalAmount}
+                    {membershipTypes[currentSlide]?.totalAmount}
                   </Text>
                   <Text style={styles.paymentButtonSubText}>Total amount</Text>
                 </View>
-                <View style={styles.proceedPaymentBtn}>
-                  <Text style={styles.proceedPaymentBtnText}>Proceed</Text>
-                  <Image
-                    source={ImageLinks.rightArrowWhite}
-                    style={styles.rightArrowWhite}
-                  />
-                </View>
+                <TouchableOpacity onPress={() => handleProceedBtnPress()}>
+                  <View style={styles.proceedPaymentBtn}>
+                    <Text style={styles.proceedPaymentBtnText}>Proceed</Text>
+                    <Image
+                      source={ImageLinks.rightArrowWhite}
+                      style={styles.rightArrowWhite}
+                    />
+                  </View>
+                </TouchableOpacity>
               </View>
             )}
           </ImageBackground>

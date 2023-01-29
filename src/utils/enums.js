@@ -164,3 +164,36 @@ export const membershipTypes = [
     ],
   },
 ];
+
+export const addressData = {
+  id: 1,
+  title: 'Navami Landmark',
+  locality: 'No 2, 12th main road, Residency road, Bengaluru - 560001',
+};
+
+export const frequentlyBoughtTogether = [
+  {
+    id: 1,
+    title: 'Residential Valuation',
+    subTitle:
+      'The real value of an Asset is not in the bricks and mortar but in its story.',
+  },
+  {
+    id: 2,
+    title: 'Portfolio Advisory',
+    subTitle:
+      'Advisory as the word suggest, is a consulting Product aimed at bringing the nuances involved in your Real Estate.',
+  },
+  {
+    id: 3,
+    title: 'Flexi Rental',
+    subTitle:
+      "We connect property owners with a wide rage of platforms, solving property owners' requirements around hosting.",
+  },
+  {
+    id: 4,
+    title: 'Buy/ Sell/ Rent',
+    subTitle:
+      'Finding a home, commercial property, tenants or a buyer can be hard.',
+  },
+];

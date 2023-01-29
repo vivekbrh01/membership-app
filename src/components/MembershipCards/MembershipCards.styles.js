@@ -26,7 +26,7 @@ export default StyleSheet.create({
   },
   isCurrrentCardText: {
     color: '#4D6881',
-    fontWeight: 600,
+    fontWeight: '600',
     fontSize: 12,
   },
   cardHeading: {
@@ -35,7 +35,7 @@ export default StyleSheet.create({
     color: 'white',
     fontFamily: 'Literata-Regular',
     fontStyle: 'normal',
-    fontWeight: 500,
+    fontWeight: '500',
     paddingBottom: 20,
     paddingTop: 20,
   },
@@ -62,14 +62,14 @@ export default StyleSheet.create({
     textAlign: 'center',
     fontSize: 20,
     color: 'white',
-    fontWeight: 600,
+    fontWeight: '600',
     letterSpacing: 1,
   },
   btnCardSubText: {
     textAlign: 'center',
     fontSize: 16,
     color: 'white',
-    fontWeight: 500,
+    fontWeight: '500',
     paddingTop: 4,
   },
   currentPlanCard: {
@@ -85,7 +85,7 @@ export default StyleSheet.create({
   currentPlanCardText: {
     textAlign: 'center',
     padding: 4,
-    fontWeight: 500,
+    fontWeight: '500',
     fontSize: 12,
   },
   // common
@@ -98,6 +98,6 @@ export default StyleSheet.create({
     maxWidth: '40%',
   },
   fw600: {
-    fontWeight: 600,
+    fontWeight: '600',
   },
 });
