@@ -157,6 +157,21 @@ export default StyleSheet.create({
   pl24: {
     paddingLeft: 24,
   },
+  p22: {
+    padding: 22,
+  },
+  pt22: {
+    paddingTop: 22,
+  },
+  pb22: {
+    paddingBottom: 22,
+  },
+  pr22: {
+    paddingRight: 22,
+  },
+  pl22: {
+    paddingLeft: 22,
+  },
   p20: {
     padding: 20,
   },

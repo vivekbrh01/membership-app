@@ -15,6 +15,8 @@ const ImageLinks = {
   // Add
   addIconWhite: require('../assets/images/add/add-icon-white.png'),
   addIconBlue: require('../assets/images/add/add-icon-blue.png'),
+  // check
+  checkIconBlue: require('../assets/images/check/check-icon-blue.png'),
 };
 
 export default ImageLinks;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -15,6 +15,7 @@ import ImageLinks from '../../utils/ImagesLinks';
 import {addressData} from '../../utils/enums';
 
 export default function OrderConfirmation({navigation}) {
+  const [selectAddress, setSelectAddress] = useState(true);
   return (
     <SafeAreaView>
       <View style={styles.neomorphBg}>
@@ -284,6 +285,31 @@ export default function OrderConfirmation({navigation}) {
               </View>
             </TouchableOpacity>
           </View>
+          <TouchableOpacity onPress={() => setSelectAddress(!selectAddress)}>
+            <View
+              style={[
+                commonStyles.pt22,
+                commonStyles.flexRow,
+                commonStyles.alignCenter,
+              ]}>
+              <View style={styles.checkBoxBlue}>
+                {selectAddress === true && (
+                  <Image
+                    source={ImageLinks.checkIconBlue}
+                    style={styles.checkIconBlue}
+                  />
+                )}
+              </View>
+              <Text
+                style={[
+                  commonStyles.f12,
+                  commonStyles.fw500,
+                  commonStyles.colorBlue,
+                ]}>
+                Set this as your default billing address ?
+              </Text>
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
     </SafeAreaView>
