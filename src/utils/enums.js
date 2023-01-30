@@ -1,3 +1,5 @@
+import ImageLinks from './ImagesLinks';
+
 export const membershipTypes = [
   {
     title: 'Indiassetz Silver',
@@ -177,23 +179,27 @@ export const frequentlyBoughtTogether = [
     title: 'Residential Valuation',
     subTitle:
       'The real value of an Asset is not in the bricks and mortar but in its story.',
+    image: ImageLinks.boughtTogether1,
   },
   {
     id: 2,
     title: 'Portfolio Advisory',
     subTitle:
       'Advisory as the word suggest, is a consulting Product aimed at bringing the nuances involved in your Real Estate.',
+    image: ImageLinks.boughtTogether2,
   },
   {
     id: 3,
     title: 'Flexi Rental',
     subTitle:
       "We connect property owners with a wide rage of platforms, solving property owners' requirements around hosting.",
+    image: ImageLinks.boughtTogether3,
   },
   {
     id: 4,
     title: 'Buy/ Sell/ Rent',
     subTitle:
       'Finding a home, commercial property, tenants or a buyer can be hard.',
+    image: ImageLinks.boughtTogether4,
   },
 ];

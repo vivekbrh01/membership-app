@@ -17,6 +17,11 @@ const ImageLinks = {
   addIconBlue: require('../assets/images/add/add-icon-blue.png'),
   // check
   checkIconBlue: require('../assets/images/check/check-icon-blue.png'),
+  // bought together
+  boughtTogether1: require('../assets/images/boughtTogether/bought-together-1.png'),
+  boughtTogether2: require('../assets/images/boughtTogether/bought-together-2.png'),
+  boughtTogether3: require('../assets/images/boughtTogether/bought-together-3.png'),
+  boughtTogether4: require('../assets/images/boughtTogether/bought-together-4.png'),
 };
 
 export default ImageLinks;

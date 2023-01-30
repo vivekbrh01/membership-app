@@ -1,5 +1,12 @@
 import React from 'react';
-import {View, Text, SafeAreaView, Image, TextInput} from 'react-native';
+import {
+  View,
+  Text,
+  SafeAreaView,
+  Image,
+  TextInput,
+  ScrollView,
+} from 'react-native';
 
 import styles from './OrderConfirmation.styles';
 import commonStyles from '../../utils/common.styles';
@@ -9,6 +16,7 @@ import OrderHeader from '../OrderHeader';
 import AddedItemsCard from '../AddedItemsCard';
 import ButtonBlueBg from '../ButtonBlueBg';
 import BillingAddressCard from '../BillingAddressCard';
+import BoughtTogether from '../BoughtTogether/BoughtTogether';
 
 export default function OrderConfirmation({navigation}) {
   const {
@@ -29,7 +37,6 @@ export default function OrderConfirmation({navigation}) {
     mb30,
   } = commonStyles;
   // TODO
-  // 4. Create `Faq section` and render here
   // 5. Add `Pay Now` footer
   // 6. Add `Confirmation modal`
 
@@ -37,40 +44,44 @@ export default function OrderConfirmation({navigation}) {
   // 1. use object destructuring to replace `commonStyles.`
   // 2. Move `Added items card start` to new component
   // 3. Move `Billing Address` to new component
+  // 4. Create `BoughtTogether section` and render here
 
   return (
     <SafeAreaView>
-      <View style={neomorphBg}>
-        <OrderHeader navigation={navigation} />
-        <View style={[pt30, pr20, pl20, pb20]}>
-          <AddedItemsCard />
-          <ButtonBlueBg>
-            <Image
-              source={ImageLinks.addIconWhite}
-              style={styles.addIconWhite}
+      <ScrollView>
+        <View style={neomorphBg}>
+          <OrderHeader navigation={navigation} />
+          <View style={[pt30, pr20, pl20, pb20]}>
+            <AddedItemsCard />
+            <ButtonBlueBg>
+              <Image
+                source={ImageLinks.addIconWhite}
+                style={styles.addIconWhite}
+              />
+              <Text style={[f14, fw600, colorWhite, pl8]}>Add More</Text>
+            </ButtonBlueBg>
+            <TextInput
+              multiline={true}
+              numberOfLines={4}
+              placeholder="Add a message (optional)"
+              defaultValue=""
+              style={[
+                styles.textArea,
+                neomorphBorder,
+                neomorphBg,
+                p14,
+                f14,
+                mt30,
+                mb30,
+                colorBlue,
+                fw500,
+              ]}
             />
-            <Text style={[f14, fw600, colorWhite, pl8]}>Add More</Text>
-          </ButtonBlueBg>
-          <TextInput
-            multiline={true}
-            numberOfLines={4}
-            placeholder="Add a message (optional)"
-            defaultValue=""
-            style={[
-              styles.textArea,
-              neomorphBorder,
-              neomorphBg,
-              p14,
-              f14,
-              mt30,
-              mb30,
-              colorBlue,
-              fw500,
-            ]}
-          />
-          <BillingAddressCard />
+            <BillingAddressCard />
+            <BoughtTogether />
+          </View>
         </View>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }

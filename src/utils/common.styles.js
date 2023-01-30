@@ -91,6 +91,9 @@ export default StyleSheet.create({
   f12: {
     fontSize: 12,
   },
+  f11: {
+    fontSize: 11,
+  },
 
   // font weight
   fw600: {
@@ -262,6 +265,21 @@ export default StyleSheet.create({
   pl8: {
     paddingLeft: 8,
   },
+  p4: {
+    padding: 4,
+  },
+  pt4: {
+    paddingTop: 4,
+  },
+  pb4: {
+    paddingBottom: 4,
+  },
+  pr4: {
+    paddingRight: 4,
+  },
+  pl4: {
+    paddingLeft: 4,
+  },
 
   // margin
   mrAuto: {
@@ -371,6 +389,7 @@ export default StyleSheet.create({
 //   f16,
 //   f14,
 //   f12,
+//   f11,
 //   fw600,
 //   fw500,
 //   colorBlue,
