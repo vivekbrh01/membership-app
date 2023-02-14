@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -18,8 +18,10 @@ import ButtonBlueBg from '../ButtonBlueBg';
 import BillingAddressCard from '../BillingAddressCard';
 import BoughtTogether from '../BoughtTogether/BoughtTogether';
 import PayNowFooter from '../PayNowFooter';
+import OrderConfirmationModal from '../OrderConfirmationModal';
 
 export default function OrderConfirmation({navigation}) {
+  const [showModal, setShowModal] = useState(false);
   const {
     neomorphBg,
     neomorphBorder,
@@ -37,15 +39,6 @@ export default function OrderConfirmation({navigation}) {
     mt30,
     mb30,
   } = commonStyles;
-  // TODO
-  // 6. Add `Confirmation modal`
-
-  // DONE
-  // 1. use object destructuring to replace `commonStyles.`
-  // 2. Move `Added items card start` to new component
-  // 3. Move `Billing Address` to new component
-  // 4. Create `BoughtTogether section` and render here
-  // 5. Add `Pay Now` footer
 
   return (
     <SafeAreaView>
@@ -83,8 +76,12 @@ export default function OrderConfirmation({navigation}) {
           </View>
         </View>
         <View>
-          <PayNowFooter />
+          <PayNowFooter setShowModal={setShowModal} />
         </View>
+        <OrderConfirmationModal
+          setShowModal={setShowModal}
+          showModal={showModal}
+        />
       </ScrollView>
     </SafeAreaView>
   );

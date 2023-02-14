@@ -21,6 +21,16 @@ export default StyleSheet.create({
     borderWidth: 1,
   },
 
+  // Modal
+  modalWrapper: {
+    backgroundColor: '#000000aa',
+  },
+  modalContent: {
+    position: 'absolute',
+    top: '40%',
+    left: 20,
+    right: 20,
+  },
   // Background
   bgBlue: {
     backgroundColor: '#0A3A67',
@@ -55,14 +65,24 @@ export default StyleSheet.create({
   justifyCenter: {
     justifyContent: 'center',
   },
+  g16: {
+    gap: 16,
+    gridGap: 16,
+  },
   g12: {
     gap: 12,
     gridGap: 12,
   },
 
   // border radius
+  borderRadius30: {
+    borderRadius: 30,
+  },
   borderRadius14: {
     borderRadius: 14,
+  },
+  borderRadius10: {
+    borderRadius: 10,
   },
   borderRadius8: {
     borderRadius: 8,
@@ -116,6 +136,9 @@ export default StyleSheet.create({
   colorPurple: {
     color: '#80164E',
   },
+  colorLightPurple: {
+    color: '#75013D',
+  },
 
   // text decoration
   underlineBlue: {
@@ -128,7 +151,9 @@ export default StyleSheet.create({
     borderBottomWidth: 1,
     paddingBottom: 1,
   },
-
+  textAlign: {
+    textAlign: 'center',
+  },
   // padding
   p30: {
     padding: 20,
@@ -371,6 +396,8 @@ export default StyleSheet.create({
 //   neomorphBorder,
 //   neomorphShadow,
 //   neomorphBorderBlue,
+//   modalWrapper,
+//   modalContent,
 //   bgBlue,
 //   bgWhite,
 //   w100,
@@ -381,8 +408,11 @@ export default StyleSheet.create({
 //   alignCenter,
 //   justifyBetween,
 //   justifyCenter,
+//   g16,
 //   g12,
+//   borderRadius30,
 //   borderRadius14,
+//   borderRadius10,
 //   borderRadius8,
 //   borderTopLightBlue,
 //   borderRightLightBlue,
@@ -396,8 +426,10 @@ export default StyleSheet.create({
 //   colorLightBlue,
 //   colorWhite,
 //   colorPurple,
+//   colorLightPurple,
 //   underlineBlue,
 //   underlinePurple,
+//   textAlign,
 //   p30,
 //   pt30,
 //   pb30,
