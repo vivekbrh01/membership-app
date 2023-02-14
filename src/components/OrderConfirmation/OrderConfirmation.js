@@ -17,6 +17,7 @@ import AddedItemsCard from '../AddedItemsCard';
 import ButtonBlueBg from '../ButtonBlueBg';
 import BillingAddressCard from '../BillingAddressCard';
 import BoughtTogether from '../BoughtTogether/BoughtTogether';
+import PayNowFooter from '../PayNowFooter';
 
 export default function OrderConfirmation({navigation}) {
   const {
@@ -37,7 +38,6 @@ export default function OrderConfirmation({navigation}) {
     mb30,
   } = commonStyles;
   // TODO
-  // 5. Add `Pay Now` footer
   // 6. Add `Confirmation modal`
 
   // DONE
@@ -45,6 +45,7 @@ export default function OrderConfirmation({navigation}) {
   // 2. Move `Added items card start` to new component
   // 3. Move `Billing Address` to new component
   // 4. Create `BoughtTogether section` and render here
+  // 5. Add `Pay Now` footer
 
   return (
     <SafeAreaView>
@@ -80,6 +81,9 @@ export default function OrderConfirmation({navigation}) {
             <BillingAddressCard />
             <BoughtTogether />
           </View>
+        </View>
+        <View>
+          <PayNowFooter />
         </View>
       </ScrollView>
     </SafeAreaView>

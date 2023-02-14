@@ -6,6 +6,7 @@ const ImageLinks = {
   rightArrowWhite: require('../assets/images/arrow/right-arrow-white.png'),
   backArrowBlue: require('../assets/images/arrow/back-arrow-blue.png'),
   backArrowBlue1: require('../assets/images/arrow/back-arrow-blue-1.png'),
+  rightArrowBlue: require('../assets/images/arrow/right-arrow-blue.png'),
   // cart
   cartBlue: require('../assets/images/cart/cart-blue.png'),
   // save
