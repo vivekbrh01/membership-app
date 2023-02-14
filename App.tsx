@@ -5,10 +5,12 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import RNBootSplash from 'react-native-bootsplash';
 
 import Home from './src/components/Home';
+import OrderConfirmation from './src/components/OrderConfirmation';
 
 function App(): JSX.Element {
   const Stack = createNativeStackNavigator();
   RNBootSplash.hide({fade: true});
+
   useEffect(() => {
     LogBox.ignoreLogs(['Animated: `useNativeDriver`']);
   }, []);
@@ -21,6 +23,7 @@ function App(): JSX.Element {
           headerShown: false,
         }}>
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="OrderConfirmation" component={OrderConfirmation} />
       </Stack.Navigator>
     </NavigationContainer>
   );
