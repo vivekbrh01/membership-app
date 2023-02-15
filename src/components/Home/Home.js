@@ -16,22 +16,20 @@ import {membershipTypes} from '../../utils/enums';
 
 export default function Home({navigation}) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [selectedMembershipData, setSelectedMembershipData] = useState({});
 
   useEffect(() => {
     LogBox.ignoreLogs(['Animated: `useNativeDriver`']);
+    LogBox.ignoreAllLogs();
   }, []);
 
   function handleSliderPageChange(pageCount) {
     setCurrentSlide(pageCount);
   }
   function handleProceedBtnPress() {
-    setSelectedMembershipData(membershipTypes[currentSlide]);
-    navigation.push('OrderConfirmation', {
-      selectedMembershipData: selectedMembershipData,
+    navigation.navigate('OrderConfirmation', {
+      selectedMembershipData: membershipTypes[currentSlide],
     });
   }
-  // console.log(membershipTypes[currentSlide], 'membershipTypes');
 
   return (
     <View style={styles.main}>

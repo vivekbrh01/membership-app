@@ -5,7 +5,10 @@ import styles from './AddedItemsCard.styles.';
 import commonStyles from '../../utils/common.styles';
 import ImageLinks from '../../utils/ImagesLinks';
 
-export default function AddedItemsCard() {
+export default function AddedItemsCard({
+  selectedMembershipData,
+  pageName = '',
+}) {
   const {
     neomorphBg,
     neomorphBorder,
@@ -23,6 +26,7 @@ export default function AddedItemsCard() {
     fw500,
     colorBlue,
     colorLightBlue,
+    colorLightPurple,
     underlineBlue,
     pt24,
     pb24,
@@ -53,33 +57,57 @@ export default function AddedItemsCard() {
         </TouchableOpacity>
       </View>
       <View style={[flexRow, justifyBetween, pt16]}>
-        <Text style={[f14, fw500, colorBlue]}>1. Indiassetz Gold</Text>
-        <Text style={[f16, fw500, colorBlue]}>₹ 1,999</Text>
+        <Text style={[f14, fw500, colorBlue]}>
+          1. {selectedMembershipData?.title}
+        </Text>
+        <Text style={[f16, fw500, colorBlue]}>
+          {selectedMembershipData?.totalAmount}
+        </Text>
       </View>
       <Text style={[f12, fw500, colorLightBlue, p8, pl12]}>Membership</Text>
       <View style={[borderTopLightBlue, flex1]} />
-      <View style={[flexRow, justifyBetween, alignCenter]}>
-        <TouchableOpacity>
-          <View style={[flexRow, alignCenter, pr16, pl16, pt12]}>
-            <Image
-              source={ImageLinks.saveIconBlue}
-              style={styles.saveIconBlue}
-            />
-            <Text style={pl12}>Save item</Text>
-          </View>
-        </TouchableOpacity>
-        <View style={borderRightLightBlue} />
+      {
+        (pageName = 'payment' ? (
+          <View style={[flexRow, justifyBetween, alignCenter]}>
+            <TouchableOpacity>
+              <View style={[flexRow, alignCenter, pr16, pl16, pt12]}>
+                <Text style={[pl12, f14, fw500, colorBlue]}>Total amount</Text>
+              </View>
+            </TouchableOpacity>
 
-        <TouchableOpacity>
-          <View style={[flexRow, alignCenter, pr16, pl16, pt12]}>
-            <Image
-              source={ImageLinks.removeIconBlue}
-              style={styles.removeIconBlue}
-            />
-            <Text style={pl12}>Remove item</Text>
+            <TouchableOpacity>
+              <View style={[flexRow, alignCenter, pr16, pl16, pt12]}>
+                <Text style={[pl12, f16, fw500, colorLightPurple]}>
+                  {selectedMembershipData?.totalAmount}
+                </Text>
+              </View>
+            </TouchableOpacity>
           </View>
-        </TouchableOpacity>
-      </View>
+        ) : (
+          <View style={[flexRow, justifyBetween, alignCenter]}>
+            <TouchableOpacity>
+              <View style={[flexRow, alignCenter, pr16, pl16, pt12]}>
+                <Image
+                  source={ImageLinks.saveIconBlue}
+                  style={styles.saveIconBlue}
+                />
+                <Text style={pl12}>Save item</Text>
+              </View>
+            </TouchableOpacity>
+            <View style={borderRightLightBlue} />
+
+            <TouchableOpacity>
+              <View style={[flexRow, alignCenter, pr16, pl16, pt12]}>
+                <Image
+                  source={ImageLinks.removeIconBlue}
+                  style={styles.removeIconBlue}
+                />
+                <Text style={pl12}>Remove item</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        ))
+      }
     </View>
   );
 }

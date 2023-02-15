@@ -3,7 +3,12 @@ import {View, Text, Modal, TouchableOpacity} from 'react-native';
 
 import commonStyles from '../../utils/common.styles';
 
-export default function OrderConfirmationModal({setShowModal, showModal}) {
+export default function OrderConfirmationModal({
+  setShowModal,
+  showModal,
+  selectedMembershipData,
+  navigation,
+}) {
   const {
     neomorphBg,
     neomorphBorderBlue,
@@ -43,6 +48,13 @@ export default function OrderConfirmationModal({setShowModal, showModal}) {
     mb16,
   } = commonStyles;
 
+  function handleProceedBtnPress() {
+    setShowModal(false);
+    navigation.navigate('PaymentPage', {
+      selectedMembershipData: selectedMembershipData,
+    });
+  }
+
   return (
     <Modal transparent={true} visible={showModal} animationType={'fade'}>
       <TouchableOpacity
@@ -52,17 +64,23 @@ export default function OrderConfirmationModal({setShowModal, showModal}) {
           <Text style={[f16, fw600, colorBlue, textAlign]}>
             Are you sure you want to place the order?
           </Text>
-          <Text style={[f14, fw500, colorBlue]}>1. Indiassetz Gold</Text>
+          <Text style={[f14, fw500, colorBlue]}>
+            1. {selectedMembershipData?.title}
+          </Text>
           <View style={[flexRow, alignCenter, justifyBetween]}>
             <Text style={[pl16, pt8, f12, fw500, colorLightBlue]}>
               Membership
             </Text>
-            <Text style={[pt8, f16, fw500, colorBlue]}>₹ 1,999</Text>
+            <Text style={[pt8, f16, fw500, colorBlue]}>
+              {selectedMembershipData?.totalAmount}
+            </Text>
           </View>
           <View style={[borderTopLightBlue, mt16, mb16]} />
           <View style={[flexRow, alignCenter, justifyBetween]}>
             <Text style={[pl14, f12, colorBlue]}>Total amount</Text>
-            <Text style={[f16, fw500, colorLightPurple]}>₹ 1,999</Text>
+            <Text style={[f16, fw500, colorLightPurple]}>
+              {selectedMembershipData?.totalAmount}
+            </Text>
           </View>
           <View style={[flexRow, alignCenter, justifyCenter, g16, pt30]}>
             <TouchableOpacity
@@ -74,7 +92,8 @@ export default function OrderConfirmationModal({setShowModal, showModal}) {
               </Text>
             </TouchableOpacity>
             <TouchableOpacity
-              style={[borderRadius10, pl30, pr30, neomorphBorderBlue, bgBlue]}>
+              style={[borderRadius10, pl30, pr30, neomorphBorderBlue, bgBlue]}
+              onPress={() => handleProceedBtnPress()}>
               <Text style={[pl14, pr14, pt8, pb8, f16, fw600, colorWhite]}>
                 Yes
               </Text>

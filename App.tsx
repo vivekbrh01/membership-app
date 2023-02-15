@@ -6,6 +6,7 @@ import RNBootSplash from 'react-native-bootsplash';
 
 import Home from './src/components/Home';
 import OrderConfirmation from './src/components/OrderConfirmation';
+import PaymentPage from './src/components/PaymentPage';
 
 function App(): JSX.Element {
   const Stack = createNativeStackNavigator();
@@ -24,6 +25,7 @@ function App(): JSX.Element {
         }}>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="OrderConfirmation" component={OrderConfirmation} />
+        <Stack.Screen name="PaymentPage" component={PaymentPage} />
       </Stack.Navigator>
     </NavigationContainer>
   );

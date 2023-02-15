@@ -5,7 +5,7 @@ import ImageLinks from '../../utils/ImagesLinks';
 import commonStyles from '../../utils/common.styles';
 import styles from './PayNowFooter.styles';
 
-export default function PayNowFooter({setShowModal}) {
+export default function PayNowFooter({setShowModal, selectedMembershipData}) {
   const {
     bgBlue,
     bgWhite,
@@ -32,7 +32,9 @@ export default function PayNowFooter({setShowModal}) {
   return (
     <View style={[bgBlue, p20, flexRow, alignCenter, justifyBetween]}>
       <View>
-        <Text style={[f16, fw600, colorWhite]}>Rs 1999</Text>
+        <Text style={[f16, fw600, colorWhite]}>
+          {selectedMembershipData?.totalAmount}
+        </Text>
         <Text style={[f12, fw600, colorWhite]}>Total amount</Text>
       </View>
       <TouchableOpacity

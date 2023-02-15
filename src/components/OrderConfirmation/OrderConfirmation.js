@@ -20,8 +20,10 @@ import BoughtTogether from '../BoughtTogether/BoughtTogether';
 import PayNowFooter from '../PayNowFooter';
 import OrderConfirmationModal from '../OrderConfirmationModal';
 
-export default function OrderConfirmation({navigation}) {
+export default function OrderConfirmation({navigation, route}) {
   const [showModal, setShowModal] = useState(false);
+
+  const selectedMembershipData = route?.params?.selectedMembershipData;
   const {
     neomorphBg,
     neomorphBorder,
@@ -46,7 +48,7 @@ export default function OrderConfirmation({navigation}) {
         <View style={neomorphBg}>
           <OrderHeader navigation={navigation} />
           <View style={[pt30, pr20, pl20, pb20]}>
-            <AddedItemsCard />
+            <AddedItemsCard selectedMembershipData={selectedMembershipData} />
             <ButtonBlueBg>
               <Image
                 source={ImageLinks.addIconWhite}
@@ -76,11 +78,16 @@ export default function OrderConfirmation({navigation}) {
           </View>
         </View>
         <View>
-          <PayNowFooter setShowModal={setShowModal} />
+          <PayNowFooter
+            setShowModal={setShowModal}
+            selectedMembershipData={selectedMembershipData}
+          />
         </View>
         <OrderConfirmationModal
           setShowModal={setShowModal}
           showModal={showModal}
+          selectedMembershipData={selectedMembershipData}
+          navigation={navigation}
         />
       </ScrollView>
     </SafeAreaView>
